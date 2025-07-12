@@ -33,7 +33,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              TechFlow
+              DakshinaMurthy Technologies
             </span>
           </div>
 
@@ -63,6 +63,12 @@ export default function Navigation() {
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Clients
+              </button>
+              <button
+                onClick={() => scrollToSection("training")}
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Training
               </button>
               <button
                 onClick={() => scrollToSection("careers")}
@@ -119,6 +125,12 @@ export default function Navigation() {
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
               >
                 Clients
+              </button>
+              <button
+                onClick={() => scrollToSection("training")}
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
+              >
+                Training
               </button>
               <button
                 onClick={() => scrollToSection("careers")}

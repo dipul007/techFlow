@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                TechFlow
+                DakshinaMurthy Technologies
               </span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Powering the future with technology. Your trusted partner for innovative IT solutions and expert talent placement.
+              Empowering innovation through technology, training, and transformation. Your trusted partner for innovative IT solutions and professional training.
             </p>
             <div className="flex space-x-4">
               <a
@@ -100,6 +100,14 @@ export default function Footer() {
               </li>
               <li>
                 <button
+                  onClick={() => scrollToSection("training")}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Training
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollToSection("careers")}
                   className="hover:text-white transition-colors text-left"
                 >
@@ -132,7 +140,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 TechFlow Solutions. All rights reserved.</p>
+          <p>&copy; 2025 DakshinaMurthy Technologies. All rights reserved.</p>
+          <p className="mt-2 text-sm">Designed & Developed by DakshinaMurthy Technologies</p>
         </div>
       </div>
     </footer>

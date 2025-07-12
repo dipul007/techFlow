@@ -43,11 +43,11 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">TechFlow</span>
+            About <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">DakshinaMurthy Technologies</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A reputed IT firm headquartered in Central India, dedicated to delivering innovative 
-            technology solutions that drive real business outcomes.
+            At DakshinaMurthy Technologies, we believe that technology should be a bridge — not a barrier — to growth and innovation. 
+            We're a trusted IT firm known for our commitment to digital transformation and technical excellence.
           </p>
         </div>
 
@@ -57,14 +57,16 @@ export default function AboutSection() {
               <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-semibold mb-3 text-blue-600">Our Mission</h3>
                 <p className="text-gray-700">
-                  To drive digital transformation through smart solutions and expert talent.
+                  Deliver robust, scalable, and future-ready software solutions that solve real-world challenges. 
+                  Empower the next generation of tech professionals through practical, hands-on training led by seasoned industry experts.
                 </p>
               </div>
 
               <div className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
                 <h3 className="text-xl font-semibold mb-3 text-emerald-600">Our Vision</h3>
                 <p className="text-gray-700">
-                  To be the most trusted technology partner in India and beyond, shaping the future of digital enterprises.
+                  To be the most trusted partner in driving digital innovation and delivering technical excellence. 
+                  Leading the future of digital transformation through trust, innovation, and technical mastery.
                 </p>
               </div>
             </div>

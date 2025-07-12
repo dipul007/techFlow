@@ -57,25 +57,25 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: "Address",
-      content: "Central India Technology Hub, Nagpur",
+      content: "Plot no. 56 Sector A, Bagroda Industrial Area, Bhopal, Huzur - 462026",
       color: "blue"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 XXXXX XXXXX",
+      content: "+91-7440272222",
       color: "emerald"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "hello@techflow.com",
+      content: "info@dmtechs.com",
       color: "indigo"
     },
     {
       icon: Globe,
       title: "Website",
-      content: "www.techflow.com",
+      content: "www.dmtechs.com",
       color: "amber"
     }
   ];

@@ -70,8 +70,9 @@ export default function HeroSection() {
                 with Technology
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                With a strong footprint in Central India and over 100 trusted clients worldwide, 
-                TechFlow stands as a beacon of innovation, excellence, and reliability in the IT industry.
+                Empowering innovation through technology, training, and transformation. 
+                DakshinaMurthy Technologies is a leading IT solutions provider based in Central India, 
+                delivering customized software and professional training.
               </p>
             </div>
 

@@ -5,33 +5,39 @@ export default function ServicesSection() {
   const services = [
     {
       icon: Code,
-      title: "Software Development",
-      description: "From concept to code, we develop scalable, secure, and user-friendly applications that fuel business growth.",
+      title: "Custom Software Development",
+      description: "Tailored software solutions that address unique business challenges across industries — from startups to enterprise-scale operations.",
       gradient: "from-blue-500 to-blue-600"
     },
     {
-      icon: Lightbulb,
-      title: "IT Consulting",
-      description: "We help businesses plan and implement tech strategies that align with their goals and drive innovation.",
+      icon: Smartphone,
+      title: "Website & Web App Development",
+      description: "Modern, responsive, and user-friendly websites and web apps built with the latest technologies and best UI/UX practices.",
       gradient: "from-emerald-500 to-emerald-600"
     },
     {
       icon: UserPlus,
-      title: "Tech Talent Placement",
-      description: "Connecting organizations with skilled developers, testers, DevOps, data scientists, and more – fast and reliably.",
+      title: "Technical Training & Mentorship",
+      description: "Industry-led training programs for freshers, conducted by professionals currently working with top global IT firms.",
       gradient: "from-indigo-500 to-indigo-600"
     },
     {
-      icon: Smartphone,
-      title: "Web & Mobile Development",
-      description: "Designing intuitive and feature-rich web and mobile solutions across all platforms.",
+      icon: Lightbulb,
+      title: "IT Consulting",
+      description: "We help you define and implement the right technology strategies to accelerate your growth and digital transformation.",
       gradient: "from-purple-500 to-purple-600"
     },
     {
-      icon: Cloud,
-      title: "Cloud & DevOps Solutions",
-      description: "Helping businesses leverage the power of the cloud with automation and scalability.",
+      icon: Smartphone,
+      title: "Mobile App Development",
+      description: "Cross-platform and native mobile solutions that help you reach your customers wherever they are.",
       gradient: "from-amber-500 to-orange-500"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Services",
+      description: "Move to the cloud with our seamless integration, hosting, and DevOps solutions for scalable infrastructure.",
+      gradient: "from-cyan-500 to-blue-500"
     }
   ];
 

@@ -2,13 +2,13 @@ import { Heart, ShoppingCart, DollarSign, Factory, GraduationCap, Home, Laptop, 
 
 export default function ClientsSection() {
   const industries = [
-    { icon: Heart, name: "Healthcare", color: "text-red-500" },
-    { icon: ShoppingCart, name: "E-commerce", color: "text-emerald-500" },
+    { icon: Laptop, name: "Government Institutions", color: "text-blue-500" },
+    { icon: Heart, name: "Healthcare Providers", color: "text-red-500" },
+    { icon: GraduationCap, name: "Educational Bodies", color: "text-orange-500" },
+    { icon: Home, name: "Real Estate Companies", color: "text-gray-600" },
+    { icon: Factory, name: "Startups & SMEs", color: "text-purple-500" },
     { icon: DollarSign, name: "Finance", color: "text-amber-500" },
-    { icon: Factory, name: "Manufacturing", color: "text-purple-500" },
-    { icon: GraduationCap, name: "Education", color: "text-orange-500" },
-    { icon: Home, name: "Real Estate", color: "text-gray-600" },
-    { icon: Laptop, name: "IT & Staffing", color: "text-cyan-500" },
+    { icon: ShoppingCart, name: "E-commerce", color: "text-emerald-500" },
     { icon: Plus, name: "And More", color: "text-indigo-500" }
   ];
 
@@ -33,7 +33,9 @@ export default function ClientsSection() {
           <h2 className="text-4xl font-bold mb-4">
             Trusted by <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">100+</span> Organizations
           </h2>
-          <p className="text-xl text-gray-600">We have proudly served clients across diverse industries</p>
+          <p className="text-xl text-gray-600">
+            We have proudly delivered over 100+ successful projects to clients across India and abroad
+          </p>
         </div>
 
         {/* Industries Grid */}
@@ -55,12 +57,13 @@ export default function ClientsSection() {
         {/* Testimonial */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 rounded-2xl text-white text-center">
           <blockquote className="text-xl mb-6 italic">
-            "Our clients trust us because we deliver – on time, every time."
+            "DakshinaMurthy Technologies helped us scale our digital operations with a secure, high-performing platform."
           </blockquote>
+          <p className="text-blue-100 mb-6">— A Client from Singapore</p>
           <div className="flex justify-center space-x-8">
             <div className="text-center">
               <div className="text-3xl font-bold">100+</div>
-              <div className="text-blue-100">Happy Clients</div>
+              <div className="text-blue-100">Projects Delivered</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold">99%</div>
