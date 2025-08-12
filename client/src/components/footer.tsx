@@ -17,27 +17,53 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Empowering innovation through technology, training, and transformation. Your trusted partner for innovative IT solutions and professional training.
+              Empowering innovation through technology, training, and
+              transformation. Your trusted partner for innovative IT solutions
+              and professional training.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <span className="text-sm">Li</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <span className="text-sm">Tw</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <span className="text-sm">Gh</span>
-              </a>
+            <div>
+              <div className="flex space-x-4">
+                <a
+                  href="#"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                >
+                  <img
+                    src="https://img.icons8.com/color/48/linkedin.png"
+                    alt="LinkedIn"
+                    className="w-10 h-10"
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                >
+                  <img
+                    src="https://img.icons8.com/color/48/twitter.png"
+                    alt="Twitter"
+                    className="w-10 h-10"
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
+                >
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/48/github.png"
+                    alt="GitHub"
+                    className="w-10 h-10"
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
+                >
+                  <img
+                    src="https://img.icons8.com/color/48/youtube-play.png"
+                    alt="YouTube"
+                    className="w-10 h-10"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -141,7 +167,9 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
           <p>&copy; 2025 DakshinaMurthy Technologies. All rights reserved.</p>
-          <p className="mt-2 text-sm">Designed & Developed by DakshinaMurthy Technologies</p>
+          <p className="mt-2 text-sm">
+            Designed & Developed by DakshinaMurthy Technologies
+          </p>
         </div>
       </div>
     </footer>

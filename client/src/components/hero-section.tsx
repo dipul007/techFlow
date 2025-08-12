@@ -42,8 +42,12 @@ function AnimatedCounter({ target, suffix = "", delay = 0 }: CounterProps) {
   }, [target, delay, hasStarted]);
 
   return (
-    <div id={`counter-${target}`} className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-      {count}{suffix}
+    <div
+      id={`counter-${target}`}
+      className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+    >
+      {count}
+      {suffix}
     </div>
   );
 }
@@ -57,7 +61,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50">
+    <section
+      id="home"
+      className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
@@ -65,14 +72,15 @@ export default function HeroSection() {
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   Powering the Future
+                  <br />
+                  with Technology
                 </span>
-                <br />
-                with Technology
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Empowering innovation through technology, training, and transformation. 
-                DakshinaMurthy Technologies is a leading IT solutions provider based in Central India, 
-                delivering customized software and professional training.
+                Empowering innovation through technology, training, and
+                transformation. DakshinaMurthy Technologies is a leading IT
+                solutions provider based in Central India, delivering customized
+                software and professional training.
               </p>
             </div>
 
@@ -80,15 +88,21 @@ export default function HeroSection() {
             <div className="grid grid-cols-3 gap-8 py-8 border-t border-gray-200">
               <div className="text-center">
                 <AnimatedCounter target={100} suffix="+" delay={0} />
-                <div className="text-sm text-gray-600 font-medium">Trusted Clients</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Trusted Clients
+                </div>
               </div>
               <div className="text-center">
                 <AnimatedCounter target={5} suffix="" delay={200} />
-                <div className="text-sm text-gray-600 font-medium">Core Services</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Core Services
+                </div>
               </div>
               <div className="text-center">
                 <AnimatedCounter target={50} suffix="+" delay={400} />
-                <div className="text-sm text-gray-600 font-medium">Expert Team</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Expert Team
+                </div>
               </div>
             </div>
 
@@ -108,7 +122,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative animate-float">
+          <div className="relative animate-slide-in-right">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
               alt="Software development team collaborating"
@@ -117,7 +131,9 @@ export default function HeroSection() {
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">24/7 Support Available</span>
+                <span className="text-sm font-medium text-gray-700">
+                  24/7 Support Available
+                </span>
               </div>
             </div>
           </div>

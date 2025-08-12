@@ -3,7 +3,13 @@ import { MapPin, Phone, Mail, Globe, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -16,11 +22,12 @@ export default function ContactSection() {
     email: "",
     company: "",
     service: "",
-    message: ""
+    message: "",
   });
 
   const contactMutation = useMutation({
-    mutationFn: (data: typeof formData) => apiRequest("POST", "/api/contact", data),
+    mutationFn: (data: typeof formData) =>
+      apiRequest("POST", "/api/contact", data),
     onSuccess: () => {
       toast({
         title: "Message sent successfully!",
@@ -32,7 +39,7 @@ export default function ContactSection() {
         email: "",
         company: "",
         service: "",
-        message: ""
+        message: "",
       });
     },
     onError: () => {
@@ -50,34 +57,35 @@ export default function ContactSection() {
   };
 
   const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       title: "Address",
-      content: "Plot no. 56 Sector A, Bagroda Industrial Area, Bhopal, Huzur - 462026",
-      color: "blue"
+      content:
+        "Plot no. 56 Sector A, Bagroda Industrial Area, Bhopal, Huzur - 462026",
+      color: "blue",
     },
     {
       icon: Phone,
       title: "Phone",
       content: "+91-7440272222",
-      color: "emerald"
+      color: "emerald",
     },
     {
       icon: Mail,
       title: "Email",
       content: "info@dmtechs.com",
-      color: "indigo"
+      color: "indigo",
     },
     {
       icon: Globe,
       title: "Website",
       content: "www.dmtechs.com",
-      color: "amber"
-    }
+      color: "amber",
+    },
   ];
 
   const getColorClasses = (color: string) => {
@@ -85,9 +93,11 @@ export default function ContactSection() {
       blue: "bg-blue-50 text-blue-600",
       emerald: "bg-emerald-50 text-emerald-600",
       indigo: "bg-indigo-50 text-indigo-600",
-      amber: "bg-amber-50 text-amber-600"
+      amber: "bg-amber-50 text-amber-600",
     };
-    return colorMap[color as keyof typeof colorMap] || "bg-gray-50 text-gray-600";
+    return (
+      colorMap[color as keyof typeof colorMap] || "bg-gray-50 text-gray-600"
+    );
   };
 
   return (
@@ -95,9 +105,14 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Get in <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Touch</span>
+            Get in{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Touch
+            </span>
           </h2>
-          <p className="text-xl text-gray-600">Let's collaborate and build something extraordinary</p>
+          <p className="text-xl text-gray-600">
+            Let's collaborate and build something extraordinary
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
@@ -107,7 +122,9 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    First Name
+                  </label>
                   <Input
                     type="text"
                     value={formData.firstName}
@@ -117,7 +134,9 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Last Name
+                  </label>
                   <Input
                     type="text"
                     value={formData.lastName}
@@ -129,7 +148,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
                 <Input
                   type="email"
                   value={formData.email}
@@ -140,7 +161,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
                 <Input
                   type="text"
                   value={formData.company}
@@ -150,23 +173,36 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
-                <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Service Interested In
+                </label>
+                <Select
+                  value={formData.service}
+                  onValueChange={(value) => handleChange("service", value)}
+                >
                   <SelectTrigger>
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="software-development">Software Development</SelectItem>
+                    <SelectItem value="software-development">
+                      Software Development
+                    </SelectItem>
                     <SelectItem value="it-consulting">IT Consulting</SelectItem>
-                    <SelectItem value="tech-talent">Tech Talent Placement</SelectItem>
-                    <SelectItem value="web-mobile">Web & Mobile Development</SelectItem>
+                    <SelectItem value="tech-talent">
+                      Tech Talent Placement
+                    </SelectItem>
+                    <SelectItem value="web-mobile">
+                      Web & Mobile Development
+                    </SelectItem>
                     <SelectItem value="cloud-devops">Cloud & DevOps</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
                 <Textarea
                   rows={4}
                   value={formData.message}
@@ -195,7 +231,11 @@ export default function ContactSection() {
                   const Icon = info.icon;
                   return (
                     <div key={index} className="flex items-center space-x-4">
-                      <div className={`w-12 h-12 ${getColorClasses(info.color)} rounded-lg flex items-center justify-center`}>
+                      <div
+                        className={`w-12 h-12 ${getColorClasses(
+                          info.color
+                        )} rounded-lg flex items-center justify-center`}
+                      >
                         <Icon size={20} />
                       </div>
                       <div>
@@ -236,27 +276,43 @@ export default function ContactSection() {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
-                  <span className="text-sm">Li</span>
+                  <img
+                    src="https://img.icons8.com/color/48/linkedin.png"
+                    alt="LinkedIn"
+                    className="w-10 h-10"
+                  />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
-                  <span className="text-sm">Tw</span>
+                  <img
+                    src="https://img.icons8.com/color/48/twitter.png"
+                    alt="Twitter"
+                    className="w-10 h-10"
+                  />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
                 >
-                  <span className="text-sm">Gh</span>
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/48/github.png"
+                    alt="GitHub"
+                    className="w-10 h-10"
+                  />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white hover:bg-red-700 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
                 >
-                  <span className="text-sm">Yt</span>
+                  <img
+                    src="https://img.icons8.com/color/48/youtube-play.png"
+                    alt="YouTube"
+                    className="w-10 h-10"
+                  />
                 </a>
               </div>
             </div>
