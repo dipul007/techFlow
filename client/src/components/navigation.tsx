@@ -110,12 +110,12 @@ export default function Navigation() {
                 Blog
               </button>
               <Link to="/login">
-                <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded-xl font-semibold transition hover:bg-blue-700">
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                   Login
                 </button>
               </Link>
               <Link to="/register">
-                <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                   Register
                 </button>
               </Link>
