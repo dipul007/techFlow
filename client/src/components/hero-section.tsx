@@ -54,7 +54,7 @@ function AnimatedCounter({ target, suffix = "", delay = 0 }: CounterProps) {
 
 export default function HeroSection() {
   const scrollToServices = () => {
-    const element = document.getElementById("services");
+    const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
