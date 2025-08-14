@@ -1,26 +1,41 @@
-import { Code, Bug, Server, Cloud, TrendingUp, Plus, Check } from "lucide-react";
+import {
+  Code,
+  Bug,
+  Server,
+  Cloud,
+  TrendingUp,
+  Plus,
+  Check,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CareersSection() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   const benefits = [
     {
       icon: Check,
       title: "Growth-Oriented Environment",
       description: "Continuous learning and career advancement opportunities",
-      color: "blue"
+      color: "blue",
     },
     {
       icon: Check,
       title: "Cutting-Edge Projects",
       description: "Work on innovative solutions using latest technologies",
-      color: "emerald"
+      color: "emerald",
     },
     {
       icon: Check,
       title: "Collaborative Culture",
-      description: "Work with passionate professionals in a supportive environment",
-      color: "indigo"
-    }
+      description:
+        "Work with passionate professionals in a supportive environment",
+      color: "indigo",
+    },
   ];
 
   const jobOpenings = [
@@ -28,38 +43,38 @@ export default function CareersSection() {
       icon: Code,
       title: "Software Developers",
       description: "Full Stack, Backend, Frontend",
-      color: "blue"
+      color: "blue",
     },
     {
       icon: Bug,
       title: "QA Engineers",
       description: "Manual & Automation Testing",
-      color: "emerald"
+      color: "emerald",
     },
     {
       icon: Server,
       title: "DevOps Engineers",
       description: "CI/CD, Cloud Infrastructure",
-      color: "indigo"
+      color: "indigo",
     },
     {
       icon: Cloud,
       title: "Cloud Specialists",
       description: "AWS, Azure, GCP",
-      color: "amber"
+      color: "amber",
     },
     {
       icon: TrendingUp,
       title: "Business Analysts",
       description: "Requirements & Process Analysis",
-      color: "purple"
+      color: "purple",
     },
     {
       icon: Plus,
       title: "More Positions",
       description: "Explore all opportunities",
-      color: "gray"
-    }
+      color: "gray",
+    },
   ];
 
   const getColorClasses = (color: string, type: "bg" | "text" = "bg") => {
@@ -69,21 +84,31 @@ export default function CareersSection() {
       indigo: type === "bg" ? "bg-indigo-50" : "text-indigo-600",
       amber: type === "bg" ? "bg-amber-50" : "text-amber-600",
       purple: type === "bg" ? "bg-purple-50" : "text-purple-600",
-      gray: type === "bg" ? "bg-gray-50" : "text-gray-600"
+      gray: type === "bg" ? "bg-gray-50" : "text-gray-600",
     };
-    return colorMap[color as keyof typeof colorMap] || (type === "bg" ? "bg-gray-50" : "text-gray-600");
+    return (
+      colorMap[color as keyof typeof colorMap] ||
+      (type === "bg" ? "bg-gray-50" : "text-gray-600")
+    );
   };
 
   return (
-    <section id="careers" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section
+      id="careers"
+      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Join Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Team</span>
+            Join Our{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Team
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Looking to grow your career in a dynamic IT environment? Join a company where your skills are valued, 
-            your growth is prioritized, and innovation is a daily pursuit.
+            Looking to grow your career in a dynamic IT environment? Join a
+            company where your skills are valued, your growth is prioritized,
+            and innovation is a daily pursuit.
           </p>
         </div>
 
@@ -103,8 +128,15 @@ export default function CareersSection() {
                 const Icon = benefit.icon;
                 return (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className={`w-8 h-8 ${getColorClasses(benefit.color)} rounded-lg flex items-center justify-center mt-1`}>
-                      <Icon className={getColorClasses(benefit.color, "text")} size={16} />
+                    <div
+                      className={`w-8 h-8 ${getColorClasses(
+                        benefit.color
+                      )} rounded-lg flex items-center justify-center mt-1`}
+                    >
+                      <Icon
+                        className={getColorClasses(benefit.color, "text")}
+                        size={16}
+                      />
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">{benefit.title}</h4>
@@ -119,7 +151,9 @@ export default function CareersSection() {
 
         {/* Job Openings */}
         <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-          <h3 className="text-2xl font-bold mb-8 text-center">Current Openings</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">
+            Current Openings
+          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {jobOpenings.map((job, index) => {
               const Icon = job.icon;
@@ -129,11 +163,17 @@ export default function CareersSection() {
                   className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <Icon className={getColorClasses(job.color, "text")} size={24} />
+                    <Icon
+                      className={getColorClasses(job.color, "text")}
+                      size={24}
+                    />
                     <h4 className="font-semibold text-lg">{job.title}</h4>
                   </div>
                   <p className="text-gray-600 mb-4">{job.description}</p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                  <button
+                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                    onClick={() => scrollToSection("contact")}
+                  >
                     Apply Now →
                   </button>
                 </div>

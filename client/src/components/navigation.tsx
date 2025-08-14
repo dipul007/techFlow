@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -38,31 +38,43 @@ export default function Navigation() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors">
               Home
             </button>
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <button
+              className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors"
+              onClick={() => scrollToSection("about")}
+            >
               About Us
             </button>
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            {/* <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
               Price
-            </button>
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            </button> */}
+            <button
+              className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors"
+              onClick={() => scrollToSection("contact")}
+            >
               Contact
             </button>
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors">
               Blog
             </button>
           </div>
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-blue-900 text-white px-6 py-2 rounded-xl font-semibold transition hover:bg-blue-700">
+            <Link
+              to="/login"
+              className="inline-block bg-blue-900 text-white px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-700 text-center"
+            >
               Login
-            </button>
-            <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
+            </Link>
+            <Link
+              to="/register"
+              className="inline-block border-2 border-blue-900 text-blue-900 px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white text-center"
+            >
               Register
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -97,12 +109,16 @@ export default function Navigation() {
               <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                 Blog
               </button>
-              <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded-xl font-semibold transition hover:bg-blue-700">
-                Login
-              </button>
-              <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
-                Register
-              </button>
+              <Link to="/login">
+                <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded-xl font-semibold transition hover:bg-blue-700">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
+                  Register
+                </button>
+              </Link>
             </div>
           </div>
         )}

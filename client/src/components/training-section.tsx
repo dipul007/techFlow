@@ -145,7 +145,7 @@ export default function TrainingSection() {
         </div>
 
         {/* Training Programs Grid */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-2xl font-bold text-center mb-12">Our Training Programs</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trainingPrograms.map((program, index) => {
@@ -177,7 +177,7 @@ export default function TrainingSection() {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
         {/* <div className="bg-white p-8 rounded-2xl shadow-lg text-center border border-gray-100">

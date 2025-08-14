@@ -7,6 +7,7 @@ import TrainingSection from "@/components/training-section";
 import CareersSection from "@/components/careers-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import TestimonialCarousel from "@/components/caraousel";
 
 export default function Home() {
   return (
@@ -16,9 +17,10 @@ export default function Home() {
       <AboutSection />
       {/* <ServicesSection /> */}
       {/* <ClientsSection /> */}
-      {/* <TrainingSection /> */}
+      <TrainingSection />
       <CareersSection />
       <ContactSection />
+      <TestimonialCarousel />
       <Footer />
     </div>
   );
