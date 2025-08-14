@@ -368,7 +368,7 @@ export default function ContactSection() {
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
                 >
                
                     <img
