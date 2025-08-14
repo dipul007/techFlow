@@ -141,14 +141,14 @@ export default function CareersSection() {
             })}
           </div>
 
-          <div className="text-center mt-8 pt-8 border-t border-gray-200">
+          {/* <div className="text-center mt-8 pt-8 border-t border-gray-200">
             <p className="text-gray-600 mb-4">
               Don't see the right position? We're always looking for talented individuals.
             </p>
             <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               Send Your Resume
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

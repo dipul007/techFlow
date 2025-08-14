@@ -180,7 +180,7 @@ export default function TrainingSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-white p-8 rounded-2xl shadow-lg text-center border border-gray-100">
+        {/* <div className="bg-white p-8 rounded-2xl shadow-lg text-center border border-gray-100">
           <h3 className="text-2xl font-bold mb-4">Ready to Start Your Tech Career?</h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Join our comprehensive training programs and get hands-on experience with industry-standard tools 
@@ -198,7 +198,7 @@ export default function TrainingSection() {
               Schedule Consultation
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

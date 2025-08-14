@@ -45,14 +45,15 @@ export default function Footer() {
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
+                  className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-white"
                 >
                   <img
-                    src="https://img.icons8.com/ios-glyphs/48/github.png"
-                    alt="GitHub"
-                    className="w-10 h-10"
+                    src="https://img.icons8.com/ios-glyphs/48/instagram-new.png"
+                    alt="Instagram"
+                    className="w-10 h-10 transition-shadow duration-300 hover:drop-shadow-lg"
                   />
                 </a>
+
                 <a
                   href="#"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"

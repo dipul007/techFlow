@@ -14,17 +14,26 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
+interface FormDataType {
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+  resume: File | null;
+}
 export default function ContactSection() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataType>({
     firstName: "",
     lastName: "",
     email: "",
     company: "",
     service: "",
     message: "",
+    resume: null,
   });
-
   const contactMutation = useMutation({
     mutationFn: (data: typeof formData) =>
       apiRequest("POST", "/api/contact", data),
@@ -40,6 +49,7 @@ export default function ContactSection() {
         company: "",
         service: "",
         message: "",
+        resume: null,
       });
     },
     onError: () => {
@@ -51,12 +61,57 @@ export default function ContactSection() {
     },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    contactMutation.mutate(formData);
+
+    const formPayload = new FormData();
+    formPayload.append("firstName", formData.firstName);
+    formPayload.append("lastName", formData.lastName);
+    formPayload.append("email", formData.email);
+    formPayload.append("company", formData.company);
+    formPayload.append("service", formData.service);
+    formPayload.append("message", formData.message);
+
+    // Attach resume file only if service is tech-talent
+    if (formData.service === "tech-talent" && formData.resume) {
+      formPayload.append("resume", formData.resume);
+    }
+
+    const response = await fetch("https://formspree.io/f/xzzvdpkj", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thanks! I'll get back to you soon.",
+      });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        service: "",
+        message: "",
+        resume: null,
+      });
+    } else {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    }
   };
 
-  const handleChange = (field: string, value: string) => {
+  const handleChange = <K extends keyof FormDataType>(
+    field: K,
+    value: FormDataType[K]
+  ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
@@ -198,7 +253,24 @@ export default function ContactSection() {
                   </SelectContent>
                 </Select>
               </div>
-
+              {formData.service === "tech-talent" && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Upload Resume (PDF only)
+                  </label>
+                  <Input
+                    type="file"
+                    accept="application/pdf"
+                    onChange={(e) =>
+                      handleChange("resume", e.target.files?.[0] || null)
+                    }
+                    required
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Max size: 5MB, PDF only.
+                  </p>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -298,11 +370,16 @@ export default function ContactSection() {
                   href="#"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
                 >
-                  <img
-                    src="https://img.icons8.com/ios-glyphs/48/github.png"
-                    alt="GitHub"
-                    className="w-10 h-10"
-                  />
+                  <a
+                    href="#"
+                    className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-white"
+                  >
+                    <img
+                      src="https://img.icons8.com/ios-glyphs/48/instagram-new.png"
+                      alt="Instagram"
+                      className="w-10 h-10 transition-shadow duration-300 hover:drop-shadow-lg"
+                    />
+                  </a>
                 </a>
                 <a
                   href="#"

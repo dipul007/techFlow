@@ -30,62 +30,42 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              DakshinaMurthy Technologies
-            </span>
+        <div className="flex justify-between items-center h-20">
+          {/* Brand/Logo */}
+          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            DakshinaMurthy Technologies
+          </span>
+
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Home
+            </button>
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              About Us
+            </button>
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Price
+            </button>
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Contact
+            </button>
+            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Blog
+            </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection("clients")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Clients
-              </button>
-              <button
-                onClick={() => scrollToSection("training")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Training
-              </button>
-              <button
-                onClick={() => scrollToSection("careers")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Careers
-              </button>
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-              </Button>
-            </div>
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="bg-blue-900 text-white px-6 py-2 rounded-xl font-semibold transition hover:bg-blue-700">
+              Login
+            </button>
+            <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
+              Register
+            </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Hamburger */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -98,52 +78,31 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-2">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                 Home
               </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
-                About
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                About Us
               </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
-                Services
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                Price
               </button>
-              <button
-                onClick={() => scrollToSection("clients")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
-                Clients
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                Contact
               </button>
-              <button
-                onClick={() => scrollToSection("training")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
-                Training
+              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                Blog
               </button>
-              <button
-                onClick={() => scrollToSection("careers")}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors text-left"
-              >
-                Careers
+              <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded-xl font-semibold transition hover:bg-blue-700">
+                Login
               </button>
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="bg-blue-600 text-white mt-2 text-left justify-start"
-              >
-                Contact Us
-              </Button>
+              <button className="border-2 border-blue-900 text-blue-900 px-6 py-2 mt-2 rounded-xl font-semibold transition hover:bg-blue-900 hover:text-white bg-white">
+                Register
+              </button>
             </div>
           </div>
         )}
