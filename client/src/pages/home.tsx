@@ -8,6 +8,7 @@ import CareersSection from "@/components/careers-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import TestimonialCarousel from "@/components/caraousel";
+import MapSection from "@/components/map-section";
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
       {/* <ClientsSection /> */}
       <TrainingSection />
       <CareersSection />
-      <ContactSection />
       <TestimonialCarousel />
+      <ContactSection />
+      <MapSection/>
       <Footer />
     </div>
   );

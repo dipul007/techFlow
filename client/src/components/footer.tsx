@@ -73,7 +73,7 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-300">
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("contact")}
                   className="hover:text-white transition-colors text-left"
                 >
                   Software Development
@@ -81,7 +81,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("contact")}
                   className="hover:text-white transition-colors text-left"
                 >
                   IT Consulting
@@ -89,7 +89,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("contact")}
                   className="hover:text-white transition-colors text-left"
                 >
                   Tech Talent Placement
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("contact")}
                   className="hover:text-white transition-colors text-left"
                 >
                   Web & Mobile Development
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("contact")}
                   className="hover:text-white transition-colors text-left"
                 >
                   Cloud & DevOps
@@ -141,14 +141,14 @@ export default function Footer() {
                   Careers
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => scrollToSection("clients")}
                   className="hover:text-white transition-colors text-left"
                 >
                   Our Clients
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
                   onClick={() => scrollToSection("contact")}
@@ -157,11 +157,11 @@ export default function Footer() {
                   Contact
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
 // Login.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -20,6 +21,7 @@ const Login: React.FC = () => {
         <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
           Login
         </h2>
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -63,6 +65,14 @@ const Login: React.FC = () => {
             Register
           </a>
         </p>
+        <div className="mb-6 text-center mt-4">
+          <Link
+            to="/"
+            className="inline-block text-blue-600 hover:text-indigo-600 font-medium transition-colors"
+          >
+            ← Back to Home
+          </Link>
+        </div>
       </div>
     </div>
   );

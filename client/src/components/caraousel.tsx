@@ -70,7 +70,6 @@ const TestimonialCarousel = () => {
     return () => clearTimeout(timeoutRef.current);
   }, [idx]);
 
-
   const prev = () =>
     setIdx((curr) => (curr === 0 ? testimonials.length - 1 : curr - 1));
   const next = () =>
@@ -79,7 +78,10 @@ const TestimonialCarousel = () => {
   const t = testimonials[idx];
 
   return (
-    <section className="w-full flex justify-center py-16 bg-transparent">
+    <section className="w-full flex flex-col items-center py-16 bg-transparent">
+      <h2 className="text-4xl font-bold text-gray-900 mb-10 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        Feedback
+      </h2>
       <div
         className={`relative w-full max-w-4xl mx-4 rounded-2xl shadow-xl ${t.theme} p-10 transition-colors duration-300 border`}
         style={{
