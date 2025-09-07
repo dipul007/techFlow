@@ -113,12 +113,12 @@ export default function HeroSection() {
               >
                 Get started
               </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+              <a
+                href="/coming-soon"
+                className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 View Portfolio
-              </Button>
+              </a>
             </div>
           </div>
 

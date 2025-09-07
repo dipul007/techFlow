@@ -347,7 +347,7 @@ export default function ContactSection() {
               <h4 className="font-semibold text-lg mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <img
@@ -357,7 +357,7 @@ export default function ContactSection() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   <img
@@ -367,7 +367,7 @@ export default function ContactSection() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
                 >
                
@@ -378,7 +378,7 @@ export default function ContactSection() {
                     />
                 </a>
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
                 >
                   <img

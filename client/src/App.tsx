@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 import Login from "@/pages/login";
 import Register from "@/pages/register";
+import ComingSoon from "@/pages/coming-soon";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/coming-soon" component={ComingSoon} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

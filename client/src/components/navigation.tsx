@@ -38,7 +38,10 @@ export default function Navigation() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors">
+            <button
+              className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors"
+              onClick={() => scrollToSection("home")}
+            >
               Home
             </button>
             <button
@@ -56,7 +59,10 @@ export default function Navigation() {
             >
               Contact
             </button>
-            <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors">
+            <button
+              className="text-blue-900 hover:text-blue-600 px-3 py-2 text-m font-medium transition-colors"
+              onClick={() => scrollToSection("about")}
+            >
               Blog
             </button>
           </div>
@@ -110,12 +116,12 @@ export default function Navigation() {
                 Blog
               </button>
               <Link to="/login">
-              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                   Login
                 </button>
               </Link>
               <Link to="/register">
-              <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
+                <button className="text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors text-left">
                   Register
                 </button>
               </Link>

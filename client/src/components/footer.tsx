@@ -24,7 +24,7 @@ export default function Footer() {
             <div>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <img
@@ -34,7 +34,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   <img
@@ -44,7 +44,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-white"
                 >
                   <img
@@ -55,7 +55,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="#"
+                  href="/coming-soon"
                   className="w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
                 >
                   <img
@@ -157,11 +157,11 @@ export default function Footer() {
                   Contact
                 </button>
               </li>
-              {/* <li>
-                <a href="#" className="hover:text-white transition-colors">
+              <li>
+                <a href="/coming-soon" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
