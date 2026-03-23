@@ -132,13 +132,13 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      content: "info@dmtechs.com",
+      content: "info@dmtechs.in",
       color: "indigo",
     },
     {
       icon: Globe,
       title: "Website",
-      content: "www.dmtechs.com",
+      content: "www.dmtechs.in",
       color: "amber",
     },
   ];
